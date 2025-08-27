@@ -1,0 +1,507 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 1px;
+    width: 700px;
+
+
+}
+
+/* Form Styles */
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.input-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Questions Section */
+.questions-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-row {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.question-input {
+    flex: 1;
+}
+
+.question-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.question-input input,
+.question-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    resize: vertical;
+}
+
+.question-input textarea {
+    min-height: 80px;
+}
+
+.co-input {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.co-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 12px;
+}
+
+.co-input input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Preview Section */
+.preview-section {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #7f8c8d;
+}
+
+/* A4 Paper Preview - Actual A4 dimensions */
+.a4-container {
+    background: #eee;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.a4-page {
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.a4-content {
+    padding: 20mm;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Header styles within A4 */
+.paper-header {
+    text-align: center;
+    margin: 2pt;
+}
+
+.college-title {
+    font-weight: bold;
+    font-size: 16pt;
+    margin-bottom: 8pt;
+}
+
+.Exam-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14pt;
+    align-items: flex-start;
+    margin-bottom: 10px
+}
+
+
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* space between lines */
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exam-header strong {
+    font-weight: bold;
+}
+
+
+.instruction {
+    font-size: 14pt;
+
+    padding-top: 10pt;
+
+
+    text-align: left;
+}
+
+.instructions {
+    border-top: 1px solid #333;
+
+}
+
+.exam-details {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 8pt;
+}
+
+.subject-details {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 4pt;
+}
+
+/* Part headers */
+.part-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13.5pt;
+    margin: 6pt 0 2pt 0;
+    border-bottom: 0px solid #333;
+    padding-bottom: 2pt;
+}
+
+.part-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.part-marks {
+    font-weight: bold;
+}
+
+/* Instructions */
+.instruction {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 12pt;
+    font-size: 14pt;
+}
+
+/* Question formatting */
+.question-item-part-a {
+    margin-bottom: 13.5pt;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.question-item-part-b {
+    margin-bottom: 13.5pt;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    page-break-inside: avoid;
+}
+
+.question-content-part-a {
+    flex-grow: 1;
+    margin-right: 20pt;
+
+}
+
+.question-content-part-b {
+    flex-grow: 1;
+    margin-right: 20pt;
+
+
+}
+
+
+.question-content-part-b {
+    display: flex;
+    align-items: flex-start;
+}
+
+.question-number {
+    flex-shrink: 0;
+    margin-right: 4pt;
+    /* space between number and text */
+}
+
+.question-text-container {
+    flex-grow: 1;
+    white-space: pre-wrap;
+    /* preserve newlines from textarea */
+}
+
+
+.question-number {
+    font-weight: bold;
+    margin-right: 8pt;
+}
+
+.co-tag {
+    font-weight: bold;
+    font-size: 10.5pt;
+    white-space: nowrap;
+}
+
+/* Print styles for exact A4 */
+
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .logo {
+        display: block;
+        margin: 0px 0px 0px;
+        width: 700px;
+    }
+
+
+    .container {
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .form-section,
+    .preview-controls,
+    h1,
+    h2,
+    .preview-section h2 {
+        display: none !important;
+    }
+
+    .preview-section {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .a4-container {
+        background: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .a4-page {
+        width: 210mm;
+        height: 297mm;
+        background: white;
+        box-shadow: none;
+        /* no shadows in print */
+        font-family: 'Times New Roman', Times, serif;
+        /* same as preview */
+        font-size: 12pt;
+        /* same as preview */
+        line-height: 1.5;
+        /* same as preview */
+        position: relative;
+        overflow: hidden;
+        margin: 0;
+        page-break-after: always;
+    }
+
+    .a4-content {
+        padding: 0mm;
+        height: 100%;
+        box-sizing: border-box;
+        position: relative;
+        margin-top: 0mm;
+    }
+
+    @page {
+        size: A4;
+        margin: 10mm;
+        margin-top: 10mm;
+
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    .question-row {
+        flex-direction: column;
+    }
+
+    .co-input {
+        width: 100%;
+    }
+
+    .preview-controls {
+        flex-direction: column;
+    }
+
+    .a4-page {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+
+    .a4-content {
+        padding: 0px 2px 1px;
+    }
+}
+
+@media (max-width:auto) {
+    .a4-page {
+        transform: scale(0.8);
+        transform-origin: top center;
+    }
+}

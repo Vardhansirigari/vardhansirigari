@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMR Engineering College - Question Paper Generator</title>
+    <link rel="stylesheet" href="mids.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Question Paper Generator</h1>
+        
+        <!-- Input Form -->
+        <div class="form-section">
+            <h2>📝 Question Paper Details</h2>
+            
+            <!-- General Information -->
+            <div class="form-group">
+                <h3>📘 General Information</h3>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="subject">Subject Name:</label>
+                        <input type="text" id="subject" placeholder="e.g., DATA STRUCTURES">
+                    </div>
+                    <div class="input-group">
+                        <label for="branches">Common For Branches:</label>
+                        <input type="text" id="branches" placeholder="e.g., CSE, ECE">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="monthYear">Month & Year of Exam:</label>
+                        <input type="text" id="monthYear" placeholder="e.g., June-2025">
+                    </div>
+                    <div class="input-group">
+                        <label for="btechYear">B.Tech Year:</label>
+                        <select id="btechYear">
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="midExam">Mid Exam:</label>
+                        <select id="midExam">
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="semExam">sem Exam:</label>
+                        <select id="semExam">
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="partAMarks">PART-A Marks:</label>
+                        <input type="text" id="partAMarks" value="10" placeholder="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="partBMarks">PART-B Marks:</label>
+                        <input type="text" id="partBMarks" value="20" placeholder="20">
+                    </div>
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="Timeings">Exam From :</label>
+                        <input type="time" id="Exam_From" >
+                    </div>
+                    <div class="input-group">
+                        <label for="Timeings">Exam Ends :</label>
+                        <input type="time" id="Exam_Ends"  >
+                    </div>
+                    <div class="input-group">
+                        <label for="date">Date:</label>
+                        <input type="text" id="Exam_Date" value="DD-MM-YYYY">
+                    </div> 
+                    <div class="input-group">
+                        <label for="course">BRANCH</label>
+                        <input type="text" id="course" value="CSE" placeholder="eg:CSE,AIML,IT,ECE">
+                    </div>           
+
+                </div>
+            </div>
+
+            <!-- PART-A Questions -->
+            <div class="form-group">
+                <h3>🧾 PART-A: Short Questions (5x2=10 M)</h3>
+                <div class="questions-section">
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q1">Question 1:</label>
+                            <input type="text" id="q1" placeholder="Enter question 1">
+                        </div>
+                        <div class="co-input">
+                            <label for="co1">CO Tag:</label>
+                            <input type="text" id="co1" placeholder="CO1">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q2">Question 2:</label>
+                            <input type="text" id="q2" placeholder="Enter question 2">
+                        </div>
+                        <div class="co-input">
+                            <label for="co2">CO Tag:</label>
+                            <input type="text" id="co2" placeholder="CO2">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q3">Question 3:</label>
+                            <input type="text" id="q3" placeholder="Enter question 3">
+                        </div>
+                        <div class="co-input">
+                            <label for="co3">CO Tag:</label>
+                            <input type="text" id="co3" placeholder="CO3">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q4">Question 4:</label>
+                            <input type="text" id="q4" placeholder="Enter question 4">
+                        </div>
+                        <div class="co-input">
+                            <label for="co4">CO Tag:</label>
+                            <input type="text" id="co4" placeholder="CO4">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q5">Question 5:</label>
+                            <input type="text" id="q5" placeholder="Enter question 5">
+                        </div>
+                        <div class="co-input">
+                            <label for="co5">CO Tag:</label>
+                            <input type="text" id="co5" placeholder="CO5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PART-B Questions -->
+            <div class="form-group">
+                <h3>📝 PART-B: Long Questions (4x5=20M) - Answer any FOUR</h3>
+                <div class="questions-section">
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q6">Question 6:</label>
+                            <textarea id="q6" placeholder="Enter question 6"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co6">CO Tag:</label>
+                            <input type="text" id="co6" placeholder="CO1">
+                           
+
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q7">Question 7:</label>
+                            <textarea id="q7" placeholder="Enter question 7"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co7">CO Tag:</label>
+                            <input type="text" id="co7" placeholder="CO2">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q8">Question 8:</label>
+                            <textarea id="q8" placeholder="Enter question 8"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co8">CO Tag:</label>
+                            <input type="text" id="co8" placeholder="CO3">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q9">Question 9:</label>
+                            <textarea id="q9" placeholder="Enter question 9"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co9">CO Tag:</label>
+                            <input type="text" id="co9" placeholder="CO4">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q10">Question 10:</label>
+                            <textarea id="q10" placeholder="Enter question 10"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co10">CO Tag:</label>
+                            <input type="text" id="co10" placeholder="CO5">
+                        </div>
+                    </div>
+                    <div class="question-row">
+                        <div class="question-input">
+                            <label for="q11">Question 11:</label>
+                            <textarea id="q11" placeholder="Enter question 11"></textarea>
+                        </div>
+                        <div class="co-input">
+                            <label for="co11">CO Tag:</label>
+                            <input type="text" id="co11" placeholder="CO6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-section">
+            <h2>📄 Question Paper Preview (Actual A4 Size)</h2>
+            <div class="preview-controls">
+                <button id="exportPdf" class="btn btn-primary">📄 Export as PDF</button>
+                <button id="printVersion" class="btn btn-secondary">🖨️ Print Version</button>
+                <button id="exportText" class="btn btn-secondary">📝 Export as Text</button>
+            </div>
+            
+            <div class="a4-container">
+                <div class="a4-page">
+                    <div class="a4-content" id="questionPaperPreview">
+                        <!-- Content will be dynamically generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <script src="mids.js"></script>
+</body>
+</html>
